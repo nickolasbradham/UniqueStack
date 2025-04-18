@@ -1,2 +1,2 @@
 # UniqueStack
-A Java Stack that if you try to push an object that already exists in the stack, it just moves the current object to the top.
+Performs identically to a normal {@link java.util.Stack} except if you try to push a item that already exists on the stack, it just moves the existing item to the top of the stack. Utilizes {@link HashMap} for constant-time speed on stack management and searching.
