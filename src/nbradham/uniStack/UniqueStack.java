@@ -6,7 +6,8 @@ import java.util.HashMap;
 /**
  * Performs identically to a normal {@link java.util.Stack} except if you try to
  * push a item that already exists on the stack, it just moves the existing item
- * to the top of the stack.
+ * to the top of the stack. Utilizes {@link HashMap} for constant-time speed on
+ * stack management and searching.
  * 
  * @param <E> Type of component elements.
  * 
@@ -77,6 +78,17 @@ public class UniqueStack<E> {
 	 */
 	public boolean hasItems() {
 		return head != null;
+	}
+
+	/**
+	 * Tests if this stack contains {@code item}.
+	 * 
+	 * @param item The item to look for.
+	 * @return {@code true} if {@code item} exists in the stack; {@code false}
+	 *         otherwise.
+	 */
+	public boolean contains(E item) {
+		return map.containsKey(item);
 	}
 
 	/**
